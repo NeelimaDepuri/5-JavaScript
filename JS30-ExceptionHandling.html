@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        function div(a,b){
+            try{
+                if(b===0){
+                    throw new Error("Division error zero is not allowed")
+                }
+                let res=a/b
+                console.log("result:"+res)
+            }
+            catch(error){
+                console.error("error:"+error.message)
+            }
+        }
+        div(10,2)
+        div(20,0)
+    </script>
+</body>
+</html>

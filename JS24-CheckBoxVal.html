@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Radio Button Validation</title>
+</head>
+<body>
+    <h3>Check Box Validation</h3>
+    <form action="loginsuccess.html" onsubmit="return validateC()" id="Checkform">
+        <input type="checkbox" name="it" value="music">music<br>
+        <input type="checkbox" name="it" value="run">run<br>
+        <input type="checkbox" name="it" value="eat">eat<br>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function validateC(){
+            var rb=document.getElementsByName("it")
+            let cb=0
+            for(var i=0;i<rb.length;i++){
+                if(rb[i].checked){
+                    cb++
+                }
+            }
+            if(cb===0){
+                alert("Please select atleast one")
+                return false
+            }
+            return true
+        }
+    </script>
+</body>
+</html>
